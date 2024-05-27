@@ -19,7 +19,7 @@ public class userController {
     private String addUser(@RequestBody user user){
         userService .addUser(user);
 
-        return "user Add succeccfull";
+        return "user Add successful";
     }
 
 }

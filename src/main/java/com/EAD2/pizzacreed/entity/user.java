@@ -16,12 +16,8 @@ public class user {
     @Id
     @GeneratedValue
     private int id;
-
     private String name;
-
     private String address;
-
     private int phoneNo;
-
     private String password;
 }

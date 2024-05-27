@@ -1,2 +1,24 @@
-package com.EAD2.pizzacreed.controller;public class productController {
+package com.EAD2.pizzacreed.controller;
+
+import com.EAD2.pizzacreed.entity.product;
+import com.EAD2.pizzacreed.service.productService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/product")
+public class productController {
+
+    @Autowired
+    private productService productService;
+
+    @PostMapping("/add")
+    private String addProduct(@RequestBody product product){
+        productService .addProduct(product);
+
+        return "Product Add successful";
+    }
 }

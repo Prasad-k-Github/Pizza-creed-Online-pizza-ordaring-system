@@ -16,10 +16,9 @@ public class product {
 
     @Id
     @GeneratedValue
-    private int Product_ID;
-    private String  Product_Name;
-    private double  Small_Price;
-    private double  regular_Price;
-    private double  Large_Price;
-    private String Product_Image_Path;
+    private int productId;
+    private String productName;
+    private double smallPrice;
+    private double regularPrice;
+    private double largePrice;
 }

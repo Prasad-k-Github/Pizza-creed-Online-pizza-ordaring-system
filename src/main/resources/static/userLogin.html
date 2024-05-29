@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>Login</title>
 </head>
 <body>
-$END$
+<h1>Login</h1>
+<form id="userLoginForm">
+    <label for="username">Username:</label>
+    <input id="username" name="username" required type="text"/>
+    <br/>
+    <label for="password">Password:</label>
+    <input id="password" name="password" required type="password"/>
+    <br/>
+    <button type="submit">Login</button>
+    <br/>
+    <p>Are you new to us?</p>
+    <a href="userRegistration.html"><i>click here</i></a>
+    <button id="backButton" type="button">Back</button>
+</form>
+<script src="js/app.js"></script>
 </body>
 </html>

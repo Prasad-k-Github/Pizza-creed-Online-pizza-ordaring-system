@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <title>Pizzacreed</title>
 </head>
 <body>
-$END$
+<header>
+    <h1>Pizzacreed</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="userLogin.html">Cart</a>
+        <a href="userLogin.html">Login</a>
+        <a href="login.html">Admin Login</a>
+    </nav>
+</header>
+<main>
+    <h2>All Products</h2>
+    <ul id="productList1"></ul>
+</main>
+<script src="js/app.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const productList = document.getElementById("productList1");
+      fetch("/product/get")
+        .then((response) => response.json())
+        .then((products) => {
+          products.forEach((product) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<strong>${product.productName}</strong><br>
+                              Small: $${product.smallPrice}<br>
+                              Regular: $${product.regularPrice}<br>
+                              Large: $${product.largePrice}<br>
+                              <button class="viewButton" data-id="${product.productId}">view</button>`;
+            productList.appendChild(li);
+          });
+        });
+
+      productList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("viewButton")) {
+          const productId = e.target.getAttribute("data-id");
+          window.location.href = `userLogin.html?id=${productId}`;
+        }
+      });
+    });
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.EAD2.pizzacreed.service.impl;
+package com.EAD2.pizzacreed.service.implement;
 
 import com.EAD2.pizzacreed.entity.user;
 import com.EAD2.pizzacreed.repository.userRepository;
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class userServiceImpl implements userService {
+public class userServiceImplement implements userService {
 
     @Autowired
     private userRepository userRepository;

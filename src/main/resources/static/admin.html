@@ -1,16 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product List</title>
-</head>
-<body>
-<h1>Product List</h1>
-<a href="add.html">Add Product</a>
-<button id="backButton" type="button">Back</button>
-<ul id="productList"></ul>
-<script src="js/app.js"></script>
-</body>
+    <style>
+      /* General styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+        color: #333;
+      }
+
+      /* Header styles */
+      header {
+        background-color: #ff6347;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2em;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* Main content styles */
+      main {
+        padding: 20px;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      main h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2em;
+        color: #ff6347;
+      }
+
+      /* Product grid styles */
+      #productList2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      #productList2 li {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      #productList2 li strong {
+        font-size: 1.5em;
+        color: #333;
+      }
+
+      #productList2 li button {
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #productList2 li button:hover {
+        background-color: #e5533d;
+      }
+
+      /* Button styles */
+      a,
+      button {
+        display: inline-block;
+        margin: 10px 5px;
+        padding: 10px 20px;
+        background-color: #ff6347;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      a:hover,
+      button:hover {
+        background-color: #e5533d;
+      }
+
+      #backButton {
+        background-color: #cccccc;
+        color: #333;
+      }
+
+      #backButton:hover {
+        background-color: #b3b3b3;
+      }
+
+      /* Update button styles */
+      .updateButton {
+        background-color: #4caf50; /* Green */
+      }
+
+      .updateButton:hover {
+        background-color: #45a049; /* Darker green */
+      }
+
+      /* Delete button styles */
+      .deleteButton {
+        background-color: #f44336; /* Red */
+      }
+
+      .deleteButton:hover {
+        background-color: #d32f2f; /* Darker red */
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pizzacreed</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">logout</a>
+      </nav>
+    </header>
+    <main>
+      <h1>Product List</h1>
+      <a href="add.html">Add Product</a>
+      <button id="backButton" type="button">Back</button>
+      <ul id="productList2"></ul>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
 </html>

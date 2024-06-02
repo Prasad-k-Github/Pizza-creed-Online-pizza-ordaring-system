@@ -1,8 +1,6 @@
 package com.EAD2.pizzacreed.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,15 +9,17 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class cart {
+public class basket {
 
     @Id
     @GeneratedValue
-    private int cartId;
-    private int productID;
-    private int userID;
+    private int basketID;
+
+    @ManyToOne
+    @JoinColumn(name = "productID", referencedColumnName = "productId")
+    private product product;
+
     private String sizeOfPizza;
     private int quantity;
     private double totalPrice;
-
 }

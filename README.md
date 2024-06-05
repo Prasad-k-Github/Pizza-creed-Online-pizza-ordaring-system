@@ -22,9 +22,18 @@ Before you begin, ensure you have the following installed on your system:
    Update the `application.properties` file with your database connection details. This file is located in the `src/main/resources` application.
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/pizzacreed
-   spring.datasource.username=yourusername
-   spring.datasource.password=yourpassword
+   spring.datasource.username=root
+   spring.datasource.password=
+   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
    spring.jpa.hibernate.ddl-auto=update
+   spring.jpa.show-sql=true
+   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+   logging.level.org.springframework=DEBUG
+   server.port=8080
+   spring.application.name=pizzacreed
+   spring.thymeleaf.suffix=.html
+   spring.thymeleaf.cache=false
+   logging.level.com.EAD2.pizzacreed=DEBUG
    ```
 
 ### Building the Application

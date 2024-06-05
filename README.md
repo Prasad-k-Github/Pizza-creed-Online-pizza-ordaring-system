@@ -71,8 +71,4 @@ Feel free to fork the repository and submit pull requests. For major changes, pl
 This project is licensed under the MIT License.
 
 ### Contact
-For any questions or feedback, please contact `youremail@example.com`.
-
----
-
-By following these steps, users will be able to set up and run the Pizza Creed backend application successfully. Ensure that all details, especially database configurations and API endpoints, are accurate and tailored to your specific implementation.
+For any questions or feedback, please contact `prasadkau97@gmail.com`.

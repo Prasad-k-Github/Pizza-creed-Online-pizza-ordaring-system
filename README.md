@@ -55,7 +55,7 @@ The application should start on `http://localhost:8080`.
 - Use the admin login to add, edit, or delete pizza products.
 
 ### Testing the API
-A collection of POSTMAN test cases is included in the pizzacreed.postman_collection.json file. You can also [download the POSTMAN collection here](https://www.postman.com/martian-zodiac-853057/workspace/pizzacreedglobal/collection/31839030-48427e2f-b825-413f-a1fa-33dc6f882834?action=share&creator=34104620) to import and test the API endpoints.
+A collection of POSTMAN test cases is included in the `pizzacreed.postman_collection.json` file. You can also [download the POSTMAN collection here](https://www.postman.com/martian-zodiac-853057/workspace/pizzacreedglobal/collection/31839030-48427e2f-b825-413f-a1fa-33dc6f882834?action=share&creator=34104620) to import and test the API endpoints.
 
 
 ### Project Structure

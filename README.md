@@ -54,41 +54,9 @@ The application should start on `http://localhost:8080`.
 - Access the admin console at `http://localhost:8080`.
 - Use the admin login to add, edit, or delete pizza products.
 
-#### REST API Endpoints
-The following REST API endpoints are available for managing the shopping basket:
-
-1. **List Available Products**
-   ```sh
-   GET /api/products
-   ```
-
-2. **Create a Shopping Basket**
-   ```sh
-   POST /api/baskets
-   ```
-
-3. **Add Products to the Shopping Basket**
-   ```sh
-   POST /api/baskets/{basketId}/products
-   ```
-
-4. **Remove Products from the Shopping Basket**
-   ```sh
-   DELETE /api/baskets/{basketId}/products/{productId}
-   ```
-
-5. **View Shopping Basket**
-   ```sh
-   GET /api/baskets/{basketId}
-   ```
-
-6. **Checkout**
-   ```sh
-   POST /api/baskets/{basketId}/checkout
-   ```
-
 ### Testing the API
-A collection of POSTMAN test cases is included in the `postman` directory of the repository. Import this collection into POSTMAN to test the API endpoints.
+A collection of POSTMAN test cases is included in the `postman` directory of the repository. You can also [download the POSTMAN collection here](https://www.postman.com/martian-zodiac-853057/workspace/pizzacreedglobal/collection/31839030-48427e2f-b825-413f-a1fa-33dc6f882834?action=share&creator=34104620) to import and test the API endpoints.
+
 
 ### Project Structure
 - **src/main/java**: Contains the Java source code.

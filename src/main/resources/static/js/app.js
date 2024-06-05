@@ -1,37 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const loginForm = document.getElementById("loginForm");
   const addProductForm = document.getElementById("addProductForm");
   const updateProductForm = document.getElementById("updateProductForm");
   const backButton = document.getElementById("backButton");
   const productListAdmin = document.getElementById("productList2");
-  const productListUser = document.getElementById("productList1");
 
   const init = () => {
-    if (loginForm) handleAdminLogin();
-    if (!localStorage.getItem("isAuthenticated") !== "true" && !loginForm) redirectToLogin();
     if (addProductForm) handleAddProduct();
     if (updateProductForm) handleUpdateProduct();
     if (window.location.pathname.includes("delete.html")) handleDeleteProduct();
     if (backButton) handleBackButton();
     if (productListAdmin) fetchAndDisplayProductsAdmin();
-    if (productListUser) fetchAndDisplayProductsUser();
-  };
-
-  const handleAdminLogin = () => {
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const { username, password } = loginForm;
-      if (username.value === "admin01" && password.value === "admin123") {
-        localStorage.setItem("isAuthenticated", "true");
-        window.location.href = "admin.html";
-      } else {
-        alert("Invalid username or password");
-      }
-    });
   };
 
   const redirectToLogin = () => {
-    window.location.href = "login.html";
+    window.location.href = "admin.html";
   };
 
   const handleAddProduct = () => {
@@ -128,22 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (classList.contains("updateButton")) window.location.href = `update.html?id=${dataset.id}`;
       if (classList.contains("deleteButton")) window.location.href = `delete.html?id=${dataset.id}`;
     });
-  };
-
-  const fetchAndDisplayProductsUser = () => {
-    fetch("/product/get")
-      .then((response) => response.json())
-      .then((products) => {
-        products.forEach((product) => {
-          const { productName, smallPrice, regularPrice, largePrice } = product;
-          const li = document.createElement("li");
-          li.innerHTML = `<strong>${productName}</strong><br>
-                          Small: $${smallPrice}<br>
-                          Regular: $${regularPrice}<br>
-                          Large: $${largePrice}`;
-          productListUser.appendChild(li);
-        });
-      });
   };
 
   init();

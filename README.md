@@ -1,5 +1,3 @@
-To create a step-by-step guide for using the Pizza Creed application in your GitHub README file, follow these instructions. This guide will include setup, running the application, and a brief explanation of the project's structure.
-
 ## Pizza Creed Application Setup Guide
 
 ### Introduction
@@ -10,27 +8,20 @@ Before you begin, ensure you have the following installed on your system:
 
 - JDK 17 or higher
 - Maven
-- A suitable RDBMS (e.g., MySQL, PostgreSQL)
-- Git
-
-### Cloning the Repository
-First, clone the repository from GitHub to your local machine:
-```sh
-git clone https://github.com/yourusername/pizza-creed.git
-cd pizza-creed
-```
+- MySQL
+- postman
 
 ### Database Setup
 1. **Create a Database**:
    Set up a database for the application. You can use any RDBMS you prefer. For example, using MySQL:
    ```sql
-   CREATE DATABASE pizza_creed_db;
+   CREATE DATABASE pizzacreed;
    ```
 
 2. **Configure Database Credentials**:
-   Update the `application.properties` file with your database connection details. This file is located in the `src/main/resources` directory.
+   Update the `application.properties` file with your database connection details. This file is located in the `src/main/resources` application.
    ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/pizza_creed_db
+   spring.datasource.url=jdbc:mysql://localhost:3306/pizzacreed
    spring.datasource.username=yourusername
    spring.datasource.password=yourpassword
    spring.jpa.hibernate.ddl-auto=update

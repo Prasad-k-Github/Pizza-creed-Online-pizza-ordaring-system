@@ -51,7 +51,7 @@ The application should start on `http://localhost:8080`.
 
 ### Using the Application
 #### Admin Web Console
-- Access the admin console at `http://localhost:8080/admin`.
+- Access the admin console at `http://localhost:8080`.
 - Use the admin login to add, edit, or delete pizza products.
 
 #### REST API Endpoints
